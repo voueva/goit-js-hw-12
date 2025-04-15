@@ -19,9 +19,11 @@
 body {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  padding: 30px;
 }
 
 main {
