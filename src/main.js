@@ -3,7 +3,6 @@
 import { getImageList, per_page } from './js/pixabay-api'
 import { createGallery, clearGallery, showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton, scrollBy } from './js/render-functions'
 
-
 const searchInput = document.querySelector('#searchInput');
 const searchButton = document.querySelector('#searchButton');
 const loadButton = document.querySelector('.load-button');
