@@ -6,7 +6,13 @@ const safesearch = 'true';
 const image_type = 'photo';
 export const per_page = 15;
 
-export function getImageList(q, page) {
+export async function getImageList(q, page) {
     const url = `https://pixabay.com/api/?key=${key}&q=${q}&image_type=${image_type}&orientation=${orientation}&safesearch=${safesearch}&page=${page}&per_page=${per_page}`;
-    return axios.get(url);
+    
+    try {
+        const response = await axios.get(url);
+        return response;
+    } catch (error) {
+        throw error;
+    }
 }
