@@ -62,12 +62,13 @@ export function hideLoadMoreButton() {
 }
 
 export function scrollBy() {
-    const lastItem = document.querySelector('.gallery-item:last-child');
-    if (!lastItem) return;
+    const firstCard = document.querySelector('.gallery-item');
+    if (!firstCard) return;
 
-    const top = lastItem.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: top - 150,
-        behavior: 'smooth'
+    const { height: cardHeight } = firstCard.getBoundingClientRect();
+
+    window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
     });
 }
