@@ -3,6 +3,9 @@
 import { getImageList, per_page } from './js/pixabay-api'
 import { createGallery, clearGallery, showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton, scrollBy } from './js/render-functions'
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 const searchInput = document.querySelector('#searchInput');
 const searchForm = document.querySelector('#searchForm');
 const loadButton = document.querySelector('.load-button');
